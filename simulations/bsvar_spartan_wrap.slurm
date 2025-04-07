@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#SBATCH -p cascade
+#SBATCH --time=10:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --mem=32768
+#SBATCH --mail-user=twozniak@unimelb.edu.au
+#SBATCH --mail-type=ALL
+#SBATCH --job-name="wrap"
+#SBATCH --array=1-3
+
+module load R/4.2.1
+Rscript bsvar_spartan_wrap.R ${SLURM_ARRAY_TASK_ID}
+
+my-job-stats -a -n -s
