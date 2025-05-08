@@ -49,7 +49,7 @@
 # Suggested citation: U.S. Bureau of Economic Analysis, "Table 1.1.9. Implicit Price Deflators for Gross Domestic Product" (accessed Tuesday, November 7, 2023). 
 ############################################################
 
-PATH = "inst/varia/"
+PATH = "original_data/"
 
 # population data
 ############################################################
